@@ -14,7 +14,7 @@ class TopicsTableViewController: BasicTableViewController, UITableViewDelegate, 
   @IBOutlet var textTable: UITableView!
   @IBOutlet weak var spinLabel: UIActivityIndicatorView!
     
-  let topicViewSegueIdentifier = "topicViewSegue"
+  let topicViewSegueIdentifier = "TopicViewSegue"
    
   var topics: [JSON] = [] {
     didSet{
@@ -25,7 +25,7 @@ class TopicsTableViewController: BasicTableViewController, UITableViewDelegate, 
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    self.navigationItem.title = "极客公园·观察"
+    self.navigationItem.title = "观察"
     
     textTable.delegate = self
     textTable.dataSource = self
@@ -68,7 +68,7 @@ class TopicsTableViewController: BasicTableViewController, UITableViewDelegate, 
   }
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    var cell:TableViewCell = tableView.dequeueReusableCellWithIdentifier("TextTableCell") as! TableViewCell
+    var cell:TopicTableViewCell = tableView.dequeueReusableCellWithIdentifier("TextTableCell") as! TopicTableViewCell
     // load more
     if indexPath.row == self.topics.count * 10 - 1 {
       loadMore()

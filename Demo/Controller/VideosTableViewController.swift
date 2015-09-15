@@ -11,6 +11,8 @@ import SwiftyJSON
 
 class VideosTableViewController: BasicTableViewController, UITableViewDelegate, UITableViewDataSource {
   
+  let segueID = "VideoViewSegue"
+  
   var videos: [JSON] = [] {
     didSet{
       updateTable()
@@ -78,9 +80,11 @@ class VideosTableViewController: BasicTableViewController, UITableViewDelegate, 
     if let title = videos[page][row]["title"].string {
       cell.title.text = title
     }
-    if let desc = videos[page][row]["description"].string {
-      cell.desc.text = desc
+    var desc = String()
+    for (index, p) in videos[page][row]["participants"] {
+      desc = p["username"].string! + " " + desc
     }
+    cell.desc.text = "嘉宾：\(desc)"
     if let cover = videos[page][row]["cover"]["url"].string {
       getDataFromUrl(NSURL(string: cover)!){ data in dispatch_async(dispatch_get_main_queue()) {
           cell.cover.image = UIImage(data: data!)
@@ -89,5 +93,21 @@ class VideosTableViewController: BasicTableViewController, UITableViewDelegate, 
     }
     
     return cell
+  }
+  
+//  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//    let page = indexPath.row / 10
+//    let row = indexPath.row % 10
+//  }
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == segueID {
+      if let destination = segue.destinationViewController as? VideoViewController {
+        if let videoIndex = videosTableView.indexPathForSelectedRow()?.row {
+          let video = videos[videoIndex / 10][videoIndex % 10]
+          let url = video["url"].stringValue
+          destination.url = url
+        }
+      }
+    }
   }
 }

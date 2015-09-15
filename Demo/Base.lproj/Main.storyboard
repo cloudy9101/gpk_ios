@@ -59,10 +59,10 @@
             </objects>
             <point key="canvasLocation" x="-746" y="589"/>
         </scene>
-        <!--Topics Table View Controller-->
+        <!--观察-->
         <scene sceneID="4a3-vl-rPh">
             <objects>
-                <tableViewController storyboardIdentifier="TopicsTableViewController" id="9MS-Ct-0Jt" customClass="TopicsTableViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TopicsTableViewController" title="观察" id="9MS-Ct-0Jt" customClass="TopicsTableViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="84" sectionHeaderHeight="22" sectionFooterHeight="22" id="iKW-W3-X49">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,7 +74,7 @@
                             <gestureRecognizers/>
                         </activityIndicatorView>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextTableCell" rowHeight="84" id="ZI4-9x-CxP" customClass="TableViewCell" customModule="Demo" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TextTableCell" rowHeight="84" id="ZI4-9x-CxP" customClass="TopicTableViewCell" customModule="Demo" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZI4-9x-CxP" id="y7T-Hz-W7D">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -123,7 +123,7 @@
                                     <outlet property="descLabel" destination="hUu-OV-ZKi" id="rpL-5I-7MV"/>
                                     <outlet property="imageLabel" destination="axM-ic-eF0" id="bZG-Kc-Zhd"/>
                                     <outlet property="titleLabel" destination="ZaI-Ra-bB9" id="1ok-AL-uti"/>
-                                    <segue destination="GAe-Sk-LAg" kind="show" identifier="topicViewSegue" id="6JF-0v-kQO"/>
+                                    <segue destination="GAe-Sk-LAg" kind="show" identifier="TopicViewSegue" id="6JF-0v-kQO"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -141,10 +141,10 @@
             </objects>
             <point key="canvasLocation" x="56" y="589"/>
         </scene>
-        <!--极客公园·视频-->
+        <!--视频-->
         <scene sceneID="mko-lM-Ik4">
             <objects>
-                <tableViewController storyboardIdentifier="VideosTableViewController" title="极客公园·视频" id="M5l-FY-ZsL" customClass="VideosTableViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="VideosTableViewController" title="视频" id="M5l-FY-ZsL" userLabel="视频" customClass="VideosTableViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="LzE-Xs-vxj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -166,15 +166,15 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mc-GP-0kc">
-                                            <rect key="frame" x="166" y="8" width="426" height="54"/>
+                                            <rect key="frame" x="166" y="8" width="426" height="57"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCM-lr-b5e">
-                                            <rect key="frame" x="166" y="70" width="426" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <rect key="frame" x="166" y="73" width="426" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -193,8 +193,9 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="cover" destination="JOK-3Q-zft" id="ij8-s6-6lG"/>
-                                    <outlet property="desc" destination="bCM-lr-b5e" id="RtG-t9-7A7"/>
+                                    <outlet property="desc" destination="bCM-lr-b5e" id="mcU-dV-0Wa"/>
                                     <outlet property="title" destination="2mc-GP-0kc" id="re0-Fi-Mi2"/>
+                                    <segue destination="CjC-KK-fro" kind="show" identifier="VideoViewSegue" id="SGU-eU-64K"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -214,6 +215,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NPm-gv-aqt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="56" y="1329"/>
+        </scene>
+        <!--Video View Controller-->
+        <scene sceneID="dhF-W3-YfA">
+            <objects>
+                <viewController id="CjC-KK-fro" customClass="VideoViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <webView key="view" contentMode="scaleToFill" id="iRp-Di-wSv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </webView>
+                    <connections>
+                        <outlet property="webView" destination="iRp-Di-wSv" id="c43-Gq-WJY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pka-Jb-B6K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="739" y="1329"/>
         </scene>
         <!--极客公园-->
         <scene sceneID="gM4-v4-hmu">
