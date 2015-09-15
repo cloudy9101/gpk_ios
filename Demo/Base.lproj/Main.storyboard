@@ -59,10 +59,10 @@
             </objects>
             <point key="canvasLocation" x="-746" y="589"/>
         </scene>
-        <!--View Controller-->
+        <!--Topics Table View Controller-->
         <scene sceneID="4a3-vl-rPh">
             <objects>
-                <tableViewController storyboardIdentifier="MainViewController" id="9MS-Ct-0Jt" customClass="ViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TopicsTableViewController" id="9MS-Ct-0Jt" customClass="TopicsTableViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="84" sectionHeaderHeight="22" sectionFooterHeight="22" id="iKW-W3-X49">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,7 +144,7 @@
         <!--极客公园·视频-->
         <scene sceneID="mko-lM-Ik4">
             <objects>
-                <tableViewController storyboardIdentifier="VideoViewController" title="极客公园·视频" id="M5l-FY-ZsL" customClass="VideoTableViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="VideosTableViewController" title="极客公园·视频" id="M5l-FY-ZsL" customClass="VideosTableViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="LzE-Xs-vxj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

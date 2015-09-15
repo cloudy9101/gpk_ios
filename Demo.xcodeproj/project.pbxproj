@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		612A1DDF1B918A7300E7908C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612A1DDE1B918A7300E7908C /* AppDelegate.swift */; };
-		612A1DE11B918A7300E7908C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612A1DE01B918A7300E7908C /* ViewController.swift */; };
+		612A1DE11B918A7300E7908C /* TopicsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612A1DE01B918A7300E7908C /* TopicsTableViewController.swift */; };
 		612A1DE41B918A7300E7908C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 612A1DE21B918A7300E7908C /* Main.storyboard */; };
 		612A1DE61B918A7300E7908C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 612A1DE51B918A7300E7908C /* Images.xcassets */; };
 		612A1DE91B918A7300E7908C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 612A1DE71B918A7300E7908C /* LaunchScreen.xib */; };
@@ -16,7 +16,8 @@
 		612A1DFF1B918B6300E7908C /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612A1DFE1B918B6300E7908C /* Topic.swift */; };
 		617234C91B9D6E0D00064E81 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617234C81B9D6E0D00064E81 /* ContainerViewController.swift */; };
 		617234CB1B9D6E1E00064E81 /* SideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617234CA1B9D6E1E00064E81 /* SideViewController.swift */; };
-		61C1285F1BA135AC0048F817 /* VideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1285E1BA135AC0048F817 /* VideoTableViewController.swift */; };
+		61A0C9D01BA722AE0094D352 /* BasicTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A0C9CF1BA722AE0094D352 /* BasicTableViewController.swift */; };
+		61C1285F1BA135AC0048F817 /* VideosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C1285E1BA135AC0048F817 /* VideosTableViewController.swift */; };
 		61C128631BA136AB0048F817 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61C128621BA136AB0048F817 /* VideoTableViewCell.swift */; };
 		61CFF8661B93556C00418BAF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CFF8651B93556C00418BAF /* TableViewCell.swift */; };
 		61CFF8681B94123C00418BAF /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CFF8671B94123C00418BAF /* TopicViewController.swift */; };
@@ -37,7 +38,7 @@
 		612A1DD91B918A7300E7908C /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		612A1DDD1B918A7300E7908C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		612A1DDE1B918A7300E7908C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		612A1DE01B918A7300E7908C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		612A1DE01B918A7300E7908C /* TopicsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsTableViewController.swift; sourceTree = "<group>"; };
 		612A1DE31B918A7300E7908C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		612A1DE51B918A7300E7908C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		612A1DE81B918A7300E7908C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -47,7 +48,8 @@
 		612A1DFE1B918B6300E7908C /* Topic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		617234C81B9D6E0D00064E81 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		617234CA1B9D6E1E00064E81 /* SideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideViewController.swift; sourceTree = "<group>"; };
-		61C1285E1BA135AC0048F817 /* VideoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTableViewController.swift; sourceTree = "<group>"; };
+		61A0C9CF1BA722AE0094D352 /* BasicTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicTableViewController.swift; sourceTree = "<group>"; };
+		61C1285E1BA135AC0048F817 /* VideosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideosTableViewController.swift; sourceTree = "<group>"; };
 		61C128621BA136AB0048F817 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		61CFF8651B93556C00418BAF /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		61CFF8671B94123C00418BAF /* TopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
@@ -106,11 +108,10 @@
 		612A1DDB1B918A7300E7908C /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				61C128611BA136100048F817 /* Videos */,
-				61C128601BA136030048F817 /* Topics */,
+				61A0C9D31BA72A6A0094D352 /* Model */,
+				61A0C9D21BA72A640094D352 /* View */,
+				61A0C9D11BA72A580094D352 /* Controller */,
 				612A1DE21B918A7300E7908C /* Main.storyboard */,
-				617234C81B9D6E0D00064E81 /* ContainerViewController.swift */,
-				617234CA1B9D6E1E00064E81 /* SideViewController.swift */,
 				612A1DE71B918A7300E7908C /* LaunchScreen.xib */,
 				612A1DDC1B918A7300E7908C /* Supporting Files */,
 			);
@@ -144,24 +145,34 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		61C128601BA136030048F817 /* Topics */ = {
+		61A0C9D11BA72A580094D352 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				617234C81B9D6E0D00064E81 /* ContainerViewController.swift */,
+				617234CA1B9D6E1E00064E81 /* SideViewController.swift */,
+				61A0C9CF1BA722AE0094D352 /* BasicTableViewController.swift */,
+				612A1DE01B918A7300E7908C /* TopicsTableViewController.swift */,
 				61CFF8671B94123C00418BAF /* TopicViewController.swift */,
-				612A1DFE1B918B6300E7908C /* Topic.swift */,
-				61CFF8651B93556C00418BAF /* TableViewCell.swift */,
-				612A1DE01B918A7300E7908C /* ViewController.swift */,
+				61C1285E1BA135AC0048F817 /* VideosTableViewController.swift */,
 			);
-			name = Topics;
+			path = Controller;
 			sourceTree = "<group>";
 		};
-		61C128611BA136100048F817 /* Videos */ = {
+		61A0C9D21BA72A640094D352 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				61C128621BA136AB0048F817 /* VideoTableViewCell.swift */,
-				61C1285E1BA135AC0048F817 /* VideoTableViewController.swift */,
+				61CFF8651B93556C00418BAF /* TableViewCell.swift */,
 			);
-			name = Videos;
+			path = View;
+			sourceTree = "<group>";
+		};
+		61A0C9D31BA72A6A0094D352 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				612A1DFE1B918B6300E7908C /* Topic.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		7E1DD86D5901A53C3540FCFC /* Pods */ = {
@@ -325,12 +336,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				61CFF8661B93556C00418BAF /* TableViewCell.swift in Sources */,
-				612A1DE11B918A7300E7908C /* ViewController.swift in Sources */,
+				612A1DE11B918A7300E7908C /* TopicsTableViewController.swift in Sources */,
 				617234C91B9D6E0D00064E81 /* ContainerViewController.swift in Sources */,
 				61CFF8681B94123C00418BAF /* TopicViewController.swift in Sources */,
+				61A0C9D01BA722AE0094D352 /* BasicTableViewController.swift in Sources */,
 				612A1DFF1B918B6300E7908C /* Topic.swift in Sources */,
 				612A1DDF1B918A7300E7908C /* AppDelegate.swift in Sources */,
-				61C1285F1BA135AC0048F817 /* VideoTableViewController.swift in Sources */,
+				61C1285F1BA135AC0048F817 /* VideosTableViewController.swift in Sources */,
 				617234CB1B9D6E1E00064E81 /* SideViewController.swift in Sources */,
 				61C128631BA136AB0048F817 /* VideoTableViewCell.swift in Sources */,
 			);
