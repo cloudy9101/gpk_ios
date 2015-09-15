@@ -85,7 +85,10 @@ class VideosTableViewController: BasicTableViewController, UITableViewDelegate, 
       desc = p["username"].string! + " " + desc
     }
     cell.desc.text = "嘉宾：\(desc)"
+    
     if let cover = videos[page][row]["cover"]["url"].string {
+      cell.unique = cover
+      cell.cover.image = UIImage(named: "ImagePlaceholder")
       getDataFromUrl(NSURL(string: cover)!){ data in dispatch_async(dispatch_get_main_queue()) {
           cell.cover.image = UIImage(data: data!)
         }

@@ -84,9 +84,14 @@ class TopicsTableViewController: BasicTableViewController, UITableViewDelegate, 
       cell.descLabel.text = desc
     }
     if let url = topics[page][row]["cover"]["file"]["url"].string {
-      getDataFromUrl(NSURL(string: url)!){ data in dispatch_async(dispatch_get_main_queue()) {
-        cell.imageLabel.image = UIImage(data: data!)
+      cell.unique = url
+      cell.imageLabel.image = UIImage(named: "ImagePlaceholder")
+      getDataFromUrl(NSURL(string: url)!){ data in dispatch_async(dispatch_get_main_queue())
+        {
+          if cell.unique == url {
+            cell.imageLabel.image = UIImage(data: data!)
           }
+        }
       }
     }
     
@@ -109,4 +114,3 @@ class TopicsTableViewController: BasicTableViewController, UITableViewDelegate, 
     }
   }
 }
-

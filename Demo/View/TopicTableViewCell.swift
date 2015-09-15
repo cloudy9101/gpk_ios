@@ -14,6 +14,8 @@ class TopicTableViewCell: UITableViewCell {
   @IBOutlet weak var descLabel: UILabel!
   @IBOutlet weak var imageLabel: UIImageView!
   
+  var unique: String?
+  
   override func awakeFromNib() {
     super.awakeFromNib()
     // Initialization code
