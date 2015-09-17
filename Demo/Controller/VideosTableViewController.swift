@@ -13,11 +13,7 @@ class VideosTableViewController: BasicTableViewController, UITableViewDelegate, 
   
   let segueID = "VideoViewSegue"
   
-  var videos: [JSON] = [] {
-    didSet{
-      updateTable()
-    }
-  }
+  var videos: [JSON] = []
   
   @IBOutlet var videosTableView: UITableView!
   @IBOutlet weak var spinView: UIActivityIndicatorView!
@@ -33,6 +29,7 @@ class VideosTableViewController: BasicTableViewController, UITableViewDelegate, 
     
     getDataFromUrl(videosUrl!) {data in dispatch_async(dispatch_get_main_queue()){
       self.videos = [JSON(data: data!)]
+      self.videosTableView.reloadData()
       }
     }
     
@@ -58,6 +55,7 @@ class VideosTableViewController: BasicTableViewController, UITableViewDelegate, 
     var pageUrl = NSURL(string: "?page=\(page)", relativeToURL: videosUrl)
     getDataFromUrl(pageUrl!){ data in dispatch_async(dispatch_get_main_queue()){
         self.videos += [JSON(data: data!)]
+      self.updateTable()
       }
     }
   }
@@ -89,19 +87,18 @@ class VideosTableViewController: BasicTableViewController, UITableViewDelegate, 
     if let cover = videos[page][row]["cover"]["url"].string {
       cell.unique = cover
       cell.cover.image = UIImage(named: "ImagePlaceholder")
-      getDataFromUrl(NSURL(string: cover)!){ data in dispatch_async(dispatch_get_main_queue()) {
-          cell.cover.image = UIImage(data: data!)
+      getDataFromUrl(NSURL(string: cover)!){ data in dispatch_async(dispatch_get_main_queue())
+        {
+          if cover == cell.unique {
+            cell.cover.image = UIImage(data: data!)
+          }
         }
       }
     }
     
     return cell
   }
-  
-//  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//    let page = indexPath.row / 10
-//    let row = indexPath.row % 10
-//  }
+ 
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == segueID {
       if let destination = segue.destinationViewController as? VideoViewController {

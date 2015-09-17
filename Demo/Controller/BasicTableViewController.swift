@@ -18,7 +18,7 @@ class BasicTableViewController: UITableViewController {
   
   var delegate: BasicTableViewDelegate?
   
-  let topicsUrl = NSURL(string: "http://127.0.0.1:3000/api/v1/topics")
+  let topicsUrl = NSURL(string: "http://127.0.0.1:3000/api/v1/ios/topics")
   let videosUrl = NSURL(string: "http://127.0.0.1:3000/api/v1/videos")
   
   override func viewDidLoad() {
